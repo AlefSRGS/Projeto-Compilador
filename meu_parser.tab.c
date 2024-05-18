@@ -1381,4 +1381,5 @@ yyreturnlab:
 
 #line 103 "meu_parser.y"
 
-//main
+//main 
+#include "lex.yy.c"
