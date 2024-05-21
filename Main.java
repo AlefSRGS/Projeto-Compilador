@@ -16,7 +16,7 @@ public class Main {
         gramaticaParser parser = new gramaticaParser(tokens);
 
         // Iniciar o parsing pela regra inicial
-        ParseTree tree = parser.statement();
+        ParseTree tree = parser.program();
 
         // Imprimir a árvore sintática
         System.out.println(tree.toStringTree(parser));

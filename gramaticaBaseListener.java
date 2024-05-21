@@ -28,217 +28,289 @@ public class gramaticaBaseListener implements gramaticaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(gramaticaParser.StatementContext ctx) { }
+	@Override public void enterDeclaracao(gramaticaParser.DeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(gramaticaParser.StatementContext ctx) { }
+	@Override public void exitDeclaracao(gramaticaParser.DeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression_statement(gramaticaParser.Expression_statementContext ctx) { }
+	@Override public void enterDeclaracaoVariavel(gramaticaParser.DeclaracaoVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression_statement(gramaticaParser.Expression_statementContext ctx) { }
+	@Override public void exitDeclaracaoVariavel(gramaticaParser.DeclaracaoVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaration_statement(gramaticaParser.Declaration_statementContext ctx) { }
+	@Override public void enterDeclaracaoFuncao(gramaticaParser.DeclaracaoFuncaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaration_statement(gramaticaParser.Declaration_statementContext ctx) { }
+	@Override public void exitDeclaracaoFuncao(gramaticaParser.DeclaracaoFuncaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIf_statement(gramaticaParser.If_statementContext ctx) { }
+	@Override public void enterParametros(gramaticaParser.ParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIf_statement(gramaticaParser.If_statementContext ctx) { }
+	@Override public void exitParametros(gramaticaParser.ParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhile_statement(gramaticaParser.While_statementContext ctx) { }
+	@Override public void enterParametro(gramaticaParser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhile_statement(gramaticaParser.While_statementContext ctx) { }
+	@Override public void exitParametro(gramaticaParser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFor_statement(gramaticaParser.For_statementContext ctx) { }
+	@Override public void enterBloco(gramaticaParser.BlocoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFor_statement(gramaticaParser.For_statementContext ctx) { }
+	@Override public void exitBloco(gramaticaParser.BlocoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturn_statement(gramaticaParser.Return_statementContext ctx) { }
+	@Override public void enterExpressao(gramaticaParser.ExpressaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturn_statement(gramaticaParser.Return_statementContext ctx) { }
+	@Override public void exitExpressao(gramaticaParser.ExpressaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBreak_statement(gramaticaParser.Break_statementContext ctx) { }
+	@Override public void enterAtribuicao(gramaticaParser.AtribuicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBreak_statement(gramaticaParser.Break_statementContext ctx) { }
+	@Override public void exitAtribuicao(gramaticaParser.AtribuicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterContinue_statement(gramaticaParser.Continue_statementContext ctx) { }
+	@Override public void enterTipo(gramaticaParser.TipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitContinue_statement(gramaticaParser.Continue_statementContext ctx) { }
+	@Override public void exitTipo(gramaticaParser.TipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(gramaticaParser.BlockContext ctx) { }
+	@Override public void enterEstruturaControle(gramaticaParser.EstruturaControleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(gramaticaParser.BlockContext ctx) { }
+	@Override public void exitEstruturaControle(gramaticaParser.EstruturaControleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(gramaticaParser.ExpressionContext ctx) { }
+	@Override public void enterCaseLista(gramaticaParser.CaseListaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(gramaticaParser.ExpressionContext ctx) { }
+	@Override public void exitCaseLista(gramaticaParser.CaseListaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAdditive_expression(gramaticaParser.Additive_expressionContext ctx) { }
+	@Override public void enterCaseDecl(gramaticaParser.CaseDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAdditive_expression(gramaticaParser.Additive_expressionContext ctx) { }
+	@Override public void exitCaseDecl(gramaticaParser.CaseDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMultiplicative_expression(gramaticaParser.Multiplicative_expressionContext ctx) { }
+	@Override public void enterDeclaracaoEstrutura(gramaticaParser.DeclaracaoEstruturaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMultiplicative_expression(gramaticaParser.Multiplicative_expressionContext ctx) { }
+	@Override public void exitDeclaracaoEstrutura(gramaticaParser.DeclaracaoEstruturaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnary_expression(gramaticaParser.Unary_expressionContext ctx) { }
+	@Override public void enterArray(gramaticaParser.ArrayContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnary_expression(gramaticaParser.Unary_expressionContext ctx) { }
+	@Override public void exitArray(gramaticaParser.ArrayContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrimary_expression(gramaticaParser.Primary_expressionContext ctx) { }
+	@Override public void enterArrayInicializacao(gramaticaParser.ArrayInicializacaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrimary_expression(gramaticaParser.Primary_expressionContext ctx) { }
+	@Override public void exitArrayInicializacao(gramaticaParser.ArrayInicializacaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction_call(gramaticaParser.Function_callContext ctx) { }
+	@Override public void enterExpressaoLista(gramaticaParser.ExpressaoListaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunction_call(gramaticaParser.Function_callContext ctx) { }
+	@Override public void exitExpressaoLista(gramaticaParser.ExpressaoListaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArgument_list(gramaticaParser.Argument_listContext ctx) { }
+	@Override public void enterExpressaoLogica(gramaticaParser.ExpressaoLogicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArgument_list(gramaticaParser.Argument_listContext ctx) { }
+	@Override public void exitExpressaoLogica(gramaticaParser.ExpressaoLogicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterType(gramaticaParser.TypeContext ctx) { }
+	@Override public void enterExpressaoRelacional(gramaticaParser.ExpressaoRelacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitType(gramaticaParser.TypeContext ctx) { }
+	@Override public void exitExpressaoRelacional(gramaticaParser.ExpressaoRelacionalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressaoAritmetica(gramaticaParser.ExpressaoAritmeticaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressaoAritmetica(gramaticaParser.ExpressaoAritmeticaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressaoMultiplicativa(gramaticaParser.ExpressaoMultiplicativaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressaoMultiplicativa(gramaticaParser.ExpressaoMultiplicativaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressaoUnaria(gramaticaParser.ExpressaoUnariaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressaoUnaria(gramaticaParser.ExpressaoUnariaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressaoPostfix(gramaticaParser.ExpressaoPostfixContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressaoPostfix(gramaticaParser.ExpressaoPostfixContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArgumentos(gramaticaParser.ArgumentosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArgumentos(gramaticaParser.ArgumentosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPrimaria(gramaticaParser.PrimariaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPrimaria(gramaticaParser.PrimariaContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

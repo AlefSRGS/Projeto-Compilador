@@ -17,183 +17,243 @@ public interface gramaticaListener extends ParseTreeListener {
 	 */
 	void exitProgram(gramaticaParser.ProgramContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#declaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(gramaticaParser.StatementContext ctx);
+	void enterDeclaracao(gramaticaParser.DeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#declaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(gramaticaParser.StatementContext ctx);
+	void exitDeclaracao(gramaticaParser.DeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#expression_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#declaracaoVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression_statement(gramaticaParser.Expression_statementContext ctx);
+	void enterDeclaracaoVariavel(gramaticaParser.DeclaracaoVariavelContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#expression_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#declaracaoVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression_statement(gramaticaParser.Expression_statementContext ctx);
+	void exitDeclaracaoVariavel(gramaticaParser.DeclaracaoVariavelContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#declaration_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#declaracaoFuncao}.
 	 * @param ctx the parse tree
 	 */
-	void enterDeclaration_statement(gramaticaParser.Declaration_statementContext ctx);
+	void enterDeclaracaoFuncao(gramaticaParser.DeclaracaoFuncaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#declaration_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#declaracaoFuncao}.
 	 * @param ctx the parse tree
 	 */
-	void exitDeclaration_statement(gramaticaParser.Declaration_statementContext ctx);
+	void exitDeclaracaoFuncao(gramaticaParser.DeclaracaoFuncaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#if_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#parametros}.
 	 * @param ctx the parse tree
 	 */
-	void enterIf_statement(gramaticaParser.If_statementContext ctx);
+	void enterParametros(gramaticaParser.ParametrosContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#if_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#parametros}.
 	 * @param ctx the parse tree
 	 */
-	void exitIf_statement(gramaticaParser.If_statementContext ctx);
+	void exitParametros(gramaticaParser.ParametrosContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#while_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#parametro}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhile_statement(gramaticaParser.While_statementContext ctx);
+	void enterParametro(gramaticaParser.ParametroContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#while_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#parametro}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhile_statement(gramaticaParser.While_statementContext ctx);
+	void exitParametro(gramaticaParser.ParametroContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#for_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#bloco}.
 	 * @param ctx the parse tree
 	 */
-	void enterFor_statement(gramaticaParser.For_statementContext ctx);
+	void enterBloco(gramaticaParser.BlocoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#for_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#bloco}.
 	 * @param ctx the parse tree
 	 */
-	void exitFor_statement(gramaticaParser.For_statementContext ctx);
+	void exitBloco(gramaticaParser.BlocoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#return_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#expressao}.
 	 * @param ctx the parse tree
 	 */
-	void enterReturn_statement(gramaticaParser.Return_statementContext ctx);
+	void enterExpressao(gramaticaParser.ExpressaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#return_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#expressao}.
 	 * @param ctx the parse tree
 	 */
-	void exitReturn_statement(gramaticaParser.Return_statementContext ctx);
+	void exitExpressao(gramaticaParser.ExpressaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#break_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#atribuicao}.
 	 * @param ctx the parse tree
 	 */
-	void enterBreak_statement(gramaticaParser.Break_statementContext ctx);
+	void enterAtribuicao(gramaticaParser.AtribuicaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#break_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#atribuicao}.
 	 * @param ctx the parse tree
 	 */
-	void exitBreak_statement(gramaticaParser.Break_statementContext ctx);
+	void exitAtribuicao(gramaticaParser.AtribuicaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#continue_statement}.
+	 * Enter a parse tree produced by {@link gramaticaParser#tipo}.
 	 * @param ctx the parse tree
 	 */
-	void enterContinue_statement(gramaticaParser.Continue_statementContext ctx);
+	void enterTipo(gramaticaParser.TipoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#continue_statement}.
+	 * Exit a parse tree produced by {@link gramaticaParser#tipo}.
 	 * @param ctx the parse tree
 	 */
-	void exitContinue_statement(gramaticaParser.Continue_statementContext ctx);
+	void exitTipo(gramaticaParser.TipoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#block}.
+	 * Enter a parse tree produced by {@link gramaticaParser#estruturaControle}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlock(gramaticaParser.BlockContext ctx);
+	void enterEstruturaControle(gramaticaParser.EstruturaControleContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#block}.
+	 * Exit a parse tree produced by {@link gramaticaParser#estruturaControle}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlock(gramaticaParser.BlockContext ctx);
+	void exitEstruturaControle(gramaticaParser.EstruturaControleContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#expression}.
+	 * Enter a parse tree produced by {@link gramaticaParser#caseLista}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(gramaticaParser.ExpressionContext ctx);
+	void enterCaseLista(gramaticaParser.CaseListaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#expression}.
+	 * Exit a parse tree produced by {@link gramaticaParser#caseLista}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(gramaticaParser.ExpressionContext ctx);
+	void exitCaseLista(gramaticaParser.CaseListaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#additive_expression}.
+	 * Enter a parse tree produced by {@link gramaticaParser#caseDecl}.
 	 * @param ctx the parse tree
 	 */
-	void enterAdditive_expression(gramaticaParser.Additive_expressionContext ctx);
+	void enterCaseDecl(gramaticaParser.CaseDeclContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#additive_expression}.
+	 * Exit a parse tree produced by {@link gramaticaParser#caseDecl}.
 	 * @param ctx the parse tree
 	 */
-	void exitAdditive_expression(gramaticaParser.Additive_expressionContext ctx);
+	void exitCaseDecl(gramaticaParser.CaseDeclContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#multiplicative_expression}.
+	 * Enter a parse tree produced by {@link gramaticaParser#declaracaoEstrutura}.
 	 * @param ctx the parse tree
 	 */
-	void enterMultiplicative_expression(gramaticaParser.Multiplicative_expressionContext ctx);
+	void enterDeclaracaoEstrutura(gramaticaParser.DeclaracaoEstruturaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#multiplicative_expression}.
+	 * Exit a parse tree produced by {@link gramaticaParser#declaracaoEstrutura}.
 	 * @param ctx the parse tree
 	 */
-	void exitMultiplicative_expression(gramaticaParser.Multiplicative_expressionContext ctx);
+	void exitDeclaracaoEstrutura(gramaticaParser.DeclaracaoEstruturaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#unary_expression}.
+	 * Enter a parse tree produced by {@link gramaticaParser#array}.
 	 * @param ctx the parse tree
 	 */
-	void enterUnary_expression(gramaticaParser.Unary_expressionContext ctx);
+	void enterArray(gramaticaParser.ArrayContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#unary_expression}.
+	 * Exit a parse tree produced by {@link gramaticaParser#array}.
 	 * @param ctx the parse tree
 	 */
-	void exitUnary_expression(gramaticaParser.Unary_expressionContext ctx);
+	void exitArray(gramaticaParser.ArrayContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#primary_expression}.
+	 * Enter a parse tree produced by {@link gramaticaParser#arrayInicializacao}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrimary_expression(gramaticaParser.Primary_expressionContext ctx);
+	void enterArrayInicializacao(gramaticaParser.ArrayInicializacaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#primary_expression}.
+	 * Exit a parse tree produced by {@link gramaticaParser#arrayInicializacao}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrimary_expression(gramaticaParser.Primary_expressionContext ctx);
+	void exitArrayInicializacao(gramaticaParser.ArrayInicializacaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#function_call}.
+	 * Enter a parse tree produced by {@link gramaticaParser#expressaoLista}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunction_call(gramaticaParser.Function_callContext ctx);
+	void enterExpressaoLista(gramaticaParser.ExpressaoListaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#function_call}.
+	 * Exit a parse tree produced by {@link gramaticaParser#expressaoLista}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunction_call(gramaticaParser.Function_callContext ctx);
+	void exitExpressaoLista(gramaticaParser.ExpressaoListaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#argument_list}.
+	 * Enter a parse tree produced by {@link gramaticaParser#expressaoLogica}.
 	 * @param ctx the parse tree
 	 */
-	void enterArgument_list(gramaticaParser.Argument_listContext ctx);
+	void enterExpressaoLogica(gramaticaParser.ExpressaoLogicaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#argument_list}.
+	 * Exit a parse tree produced by {@link gramaticaParser#expressaoLogica}.
 	 * @param ctx the parse tree
 	 */
-	void exitArgument_list(gramaticaParser.Argument_listContext ctx);
+	void exitExpressaoLogica(gramaticaParser.ExpressaoLogicaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link gramaticaParser#type}.
+	 * Enter a parse tree produced by {@link gramaticaParser#expressaoRelacional}.
 	 * @param ctx the parse tree
 	 */
-	void enterType(gramaticaParser.TypeContext ctx);
+	void enterExpressaoRelacional(gramaticaParser.ExpressaoRelacionalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link gramaticaParser#type}.
+	 * Exit a parse tree produced by {@link gramaticaParser#expressaoRelacional}.
 	 * @param ctx the parse tree
 	 */
-	void exitType(gramaticaParser.TypeContext ctx);
+	void exitExpressaoRelacional(gramaticaParser.ExpressaoRelacionalContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link gramaticaParser#expressaoAritmetica}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressaoAritmetica(gramaticaParser.ExpressaoAritmeticaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link gramaticaParser#expressaoAritmetica}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressaoAritmetica(gramaticaParser.ExpressaoAritmeticaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link gramaticaParser#expressaoMultiplicativa}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressaoMultiplicativa(gramaticaParser.ExpressaoMultiplicativaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link gramaticaParser#expressaoMultiplicativa}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressaoMultiplicativa(gramaticaParser.ExpressaoMultiplicativaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link gramaticaParser#expressaoUnaria}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressaoUnaria(gramaticaParser.ExpressaoUnariaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link gramaticaParser#expressaoUnaria}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressaoUnaria(gramaticaParser.ExpressaoUnariaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link gramaticaParser#expressaoPostfix}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressaoPostfix(gramaticaParser.ExpressaoPostfixContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link gramaticaParser#expressaoPostfix}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressaoPostfix(gramaticaParser.ExpressaoPostfixContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link gramaticaParser#argumentos}.
+	 * @param ctx the parse tree
+	 */
+	void enterArgumentos(gramaticaParser.ArgumentosContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link gramaticaParser#argumentos}.
+	 * @param ctx the parse tree
+	 */
+	void exitArgumentos(gramaticaParser.ArgumentosContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link gramaticaParser#primaria}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrimaria(gramaticaParser.PrimariaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link gramaticaParser#primaria}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrimaria(gramaticaParser.PrimariaContext ctx);
 }

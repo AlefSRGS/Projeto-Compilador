@@ -1,54 +1,124 @@
 grammar gramatica;
 
 // Regras da gramática
-program : statement+ EOF;
+program : declaracao* EOF ;
 
-statement : expression_statement
-          | declaration_statement
-          | if_statement
-          | while_statement
-          | for_statement
-          | return_statement
-          | break_statement
-          | continue_statement
-          | block
+declaracao : declaracaoVariavel
+           | declaracaoFuncao
+           | declaracaoEstrutura
+           | estruturaControle
+           ;
+
+declaracaoVariavel : tipo ID ';'
+                   | tipo ID '=' expressao ';'
+                   ;
+
+declaracaoFuncao : tipo ID '(' parametros ')' bloco ;
+
+parametros : parametro (',' parametro)* ;
+parametro : tipo ID
+          | tipo ID '[' ']'
+          | tipo '...' ID
           ;
 
-expression_statement : expression? ';' ;
+bloco : '{' declaracao* '}' ;
 
-declaration_statement : type IDENTIFIER ('=' expression)? ';' ;
+expressao : atribuicao
+          | expressaoLogica
+          ;
 
-if_statement : 'if' '(' expression ')' statement ('else' statement)?;
+atribuicao : ID '=' expressao
+           | ID '+=' expressao
+           | ID '-=' expressao
+           | ID '*=' expressao
+           | ID '/=' expressao
+           | ID '%=' expressao
+           | ID '&&=' expressao
+           | ID '||=' expressao
+           ;
 
-while_statement : 'while' '(' expression ')' statement ;
+tipo : 'int' | 'float' | 'double' | 'char' | 'boolean' ;
 
-for_statement : 'for' '(' expression_statement expression_statement expression? ')' statement ;
+estruturaControle : 'if' '(' expressao ')' bloco ('else' bloco)?
+                  | 'while' '(' expressao ')' bloco
+                  | 'for' '(' expressao? ';' expressao? ';' expressao? ')' bloco
+                  | 'switch' '(' expressao ')' caseLista
+                  | 'break' ';'
+                  | 'continue' ';'
+                  | 'return' expressao? ';'
+                  ;
 
-return_statement : 'return' expression? ';' ;
+caseLista : caseDecl* ;
+caseDecl : 'case' expressao ':' bloco
+         | 'default' ':' bloco
+         ;
 
-break_statement : 'break' ';' ;
+declaracaoEstrutura : 'struct' ID '{' declaracaoVariavel* '}' ';' ;
 
-continue_statement : 'continue' ';' ;
+array : ID '[' expressao ']' 
+      | ID '[' ']'
+      | arrayInicializacao
+      ;
 
-block : '{' statement* '}' ;
+arrayInicializacao : '{' expressaoLista '}' ;
 
-expression : additive_expression ;
+expressaoLista : expressao (',' expressao)* ;
 
-additive_expression : multiplicative_expression (('+' | '-') multiplicative_expression)* ;
+expressaoLogica : expressaoRelacional
+                | expressaoLogica '&&' expressaoRelacional
+                | expressaoLogica '||' expressaoRelacional
+                | '!' expressaoRelacional
+                ;
 
-multiplicative_expression : unary_expression (('*' | '/' | '%') unary_expression)* ;
+expressaoRelacional : expressaoAritmetica
+                    | expressaoAritmetica '>' expressaoAritmetica
+                    | expressaoAritmetica '>=' expressaoAritmetica
+                    | expressaoAritmetica '<' expressaoAritmetica
+                    | expressaoAritmetica '<=' expressaoAritmetica
+                    | expressaoAritmetica '!=' expressaoAritmetica
+                    | expressaoAritmetica '==' expressaoAritmetica
+                    ;
 
-unary_expression : ('+' | '-' | '!')* primary_expression ;
+expressaoAritmetica : expressaoMultiplicativa
+                    | expressaoAritmetica '+' expressaoMultiplicativa
+                    | expressaoAritmetica '-' expressaoMultiplicativa
+                    ;
 
-primary_expression : '(' expression ')' | NUMBER | IDENTIFIER | function_call ;
+expressaoMultiplicativa : expressaoUnaria
+                        | expressaoMultiplicativa '*' expressaoUnaria
+                        | expressaoMultiplicativa '/' expressaoUnaria
+                        | expressaoMultiplicativa '%' expressaoUnaria
+                        ;
 
-function_call : IDENTIFIER '(' argument_list? ')' ;
+expressaoUnaria : expressaoPostfix
+                | '-' expressaoUnaria
+                | '++' expressaoPostfix
+                | '--' expressaoPostfix
+                ;
 
-argument_list : expression (',' expression)* ;
+expressaoPostfix : primaria
+                 | primaria '[' expressao ']'
+                 | primaria '(' argumentos ')'
+                 | primaria '.' ID
+                 | primaria '->' ID
+                 ;
 
-type : 'int' | 'float' | 'char' | 'void' ; // Adição da regra type
+argumentos : expressaoLista | ;
+
+primaria : ID
+         | NUM_INT
+         | NUM_DEC
+         | TEXTO
+         | '(' expressao ')'
+         ;
 
 // Tokens
-NUMBER : [0-9]+ ;
-IDENTIFIER : [a-zA-Z]+ ;
+NUM_INT : [0-9]+ ;
+NUM_DEC : [0-9]+ '.' [0-9]+ ;
+TEXTO : '"' .*? '"' ;
+ID : [a-zA-Z_][a-zA-Z_0-9]* ;
 WS : [ \t\r\n]+ -> skip ;
+
+// Comentários
+LINE_COMMENT : '//' ~[\r\n]* -> skip ;
+BLOCK_COMMENT : '/*' .*? '*/' -> skip ;
