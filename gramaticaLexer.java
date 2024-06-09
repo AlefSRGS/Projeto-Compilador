@@ -1,4 +1,4 @@
-// Generated from c:/Users/Alef_PC/Documents/repositorio_github/Projeto-Compilador/gramatica.g4 by ANTLR 4.13.1
+// Generated from gramatica.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
